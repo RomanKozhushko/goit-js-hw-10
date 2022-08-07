@@ -64,19 +64,19 @@ function newCountryInfo(country) {
   const layoutInfo = country
     .map(({ name, flags, capital, population, languages }) => {
       const layout = `
-        <ul class="country-info__list">
-            <li class="country-info__item">
-              <img class="country-info__flag" src="${flags.svg}" alt=" ${name.official}">
-                <h2 class="country-info__item--name">${name.official}</h2>
+        <ul class="country__list">
+            <li class="country__item">
+              <img class="country__flag" src="${flags.svg}" alt=" ${name.official}">
+                <h2 class="country__item--name">${name.official}</h2>
             </li>
-            <li class="country-info__item">
-                <span class="country-info__categories">Capital: </span>${capital}
+            <li class="country__item">
+                <span class="country__categories">Capital: </span>${capital}
             </li>
-            <li class="country-info__item">
-                <span class="country-info__categories">Population: </span>${population}
+            <li class="country__item">
+                <span class="country__categories">Population: </span>${population}
             </li>
-            <li class="country-info__item">
-                 <span class="country-info__categories">Languages: </span>${Object.values(
+            <li class="country__item">
+                 <span class="country__categories">Languages: </span>${Object.values(
               languages,
             ).join(", ")}
             </li>

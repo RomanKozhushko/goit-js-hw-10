@@ -35,32 +35,27 @@ body {
 
 .country-list__name {
   font-weight: 400;
-  font-size: 24px;
-  margin: 10px 20px;
+  font-size: 40px;
+  margin: 10px 10px;
 }
 
-.country-info__list {
-  list-style: none;
-  padding: 0;
-}
-
-.country-info__item {
+.country__item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-.country-info__flag {
+.country__flag {
   width: 60px;
   height: 40px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
-.country-info__name {
+.country__name {
   font-size: 30px;
 }
 
-.country-info__categories {
+.country__categories {
   font-weight: bold;
-  margin-right: 10px;
+  margin-right: 5px;
 }
