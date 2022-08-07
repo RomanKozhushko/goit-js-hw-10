@@ -30,13 +30,13 @@ body {
 }
 
 .country-list__flag {
-  width: 30px;
+  width: 40px;
 }
 
 .country-list__name {
   font-weight: 400;
-  font-size: 20px;
-  margin: 5px 10px;
+  font-size: 24px;
+  margin: 10px 20px;
 }
 
 .country-info__list {
@@ -47,13 +47,13 @@ body {
 .country-info__item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .country-info__flag {
   width: 60px;
   height: 40px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .country-info__name {
@@ -62,5 +62,5 @@ body {
 
 .country-info__categories {
   font-weight: bold;
-  margin-right: 5px;
+  margin-right: 10px;
 }
