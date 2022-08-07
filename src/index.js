@@ -1,7 +1,6 @@
 //1. Імпорт бібліотек
 import Notiflix from 'notiflix'
 import debounce from 'lodash.debounce'
-// import { Notify } from 'notiflx/build/notiflix-notify-aio'
 import './css/styles.css';
 import { fetchCountries } from "./fetchCountries";
  
