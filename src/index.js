@@ -1,8 +1,8 @@
 //1. Імпорт бібліотек
 import debounce from 'lodash.debounce'
-import { Notify } from 'notiflix/build/notiflix-notify-aio'
-import './css/styles.css';
 import { fetchCountries } from "./fetchCountries";
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import './css/styles.css';
  
 //2. Доступ до ресурсів
 const input = document.querySelector("#search-box");
@@ -14,22 +14,24 @@ const DEBOUNCE_DELAY = 300;
 input.addEventListener("input", debounce(onInput, DEBOUNCE_DELAY));
 
 // 4. Функції виведення помилок
-// 4.1 Введення малої кількості символів
+// 4.1 Введення недостатньої кількості символів
 function infoAlert() {
     Notify.info("Too many matches found. Please enter a more specific name.");
 }
+
 // 4.2 Введення неіснуючої країни
 function wrongAlert() {
     Notify.failure("Oops, there is no country with that name");
 }
+
 // 5. Функція trim для вирізки пробілів!
 function onInput() {
     const name = input.value.trim();
     if (name === "") {
         return (countryList.innerHTML = ""), (countryInfo.innerHTML = "");
     }
-}
-// 6. 
+
+// 6. Пошук заданої країни!
  fetchCountries(name)
     .then(country => {
       countryList.innerHTML = "";
@@ -43,8 +45,8 @@ function onInput() {
       }
     })
     .catch(wrongAlert);
-
-
+}
+//7. Виведення переліку країн які задовільняють пошуку
 function newCountryList(country) {
   const layoutList = country
     .map(({ name, flags }) => {
@@ -59,7 +61,7 @@ function newCountryList(country) {
     .join("");
   return layoutList;
 }
-
+// 8. Виведення інформації про знайдену країну
 function newCountryInfo(country) {
   const layoutInfo = country
     .map(({ name, flags, capital, population, languages }) => {
